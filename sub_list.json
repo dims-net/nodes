@@ -1,9 +1,9 @@
 [
   {
     "id": 0,
-    "remarks": "Mangkoyla/scraper",
-    "site": "https://github.com/mangkoyla/scraper",
-    "url": "https://raw.githubusercontent.com/mangkoyla/scraper/main/All",
+    "remarks": "dims-net/nodes",
+    "site": "https://github.com/dims-net/nodes",
+    "url": "https://raw.githubusercontent.com/dims-net/nodes/main/All",
     "update_method": "auto",
     "enabled": true
   }
