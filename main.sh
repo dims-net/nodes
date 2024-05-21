@@ -1,5 +1,6 @@
 #!/bin/bash
 links=(
+    "https://raw.githubusercontent.com/m3hdio1/v2ray_sub/main/v2ray_sub.txt"
     "https://raw.githubusercontent.com/hkpc/V2ray-Configs/main/All_Configs_Sub.txt"
     "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt"
     "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt"
