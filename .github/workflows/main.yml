@@ -1,0 +1,35 @@
+name: Fetch Url & Test Url
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */2 * * *'
+
+jobs:
+  scraping:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run Script
+      run: |
+        rm All
+        bash main.sh
+
+    - name: Add Changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add All
+
+    - name: Commit Changes
+      run: |
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') Update Accounts"
+
+    - name: Push Changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        

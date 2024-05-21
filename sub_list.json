@@ -1,0 +1,10 @@
+[
+  {
+    "id": 0,
+    "remarks": "Mangkoyla/scraper",
+    "site": "https://github.com/mangkoyla/scraper",
+    "url": "https://raw.githubusercontent.com/mangkoyla/scraper/main/All",
+    "update_method": "auto",
+    "enabled": true
+  }
+]
