@@ -3,7 +3,7 @@ name: Fetch Url & Test Url
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 23 * * *'
 
 jobs:
   scraping:
