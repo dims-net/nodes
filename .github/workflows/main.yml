@@ -13,16 +13,25 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: "npm"
+
     - name: Run Script
       run: |
         rm All
         bash main.sh
 
+    - name: Run pinger.js
+      run: npm install && npm start
+
     - name: Add Changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add All
+        git add All best-ping.txt
 
     - name: Commit Changes
       run: |
