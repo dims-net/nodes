@@ -1,0 +1,16 @@
+{
+  "name": "pinger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pinger.js",
+  "scripts": {
+    "start": "node pinger.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "net": "^1.0.2"
+  }
+}
