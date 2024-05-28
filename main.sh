@@ -55,19 +55,21 @@ cat extracted_nodes extracted_nodes64 > account
 
 rm -rf All
 sort -u account > oke
-output_file="oke"
 file="account"
 vmess=$(grep -E -o 'vmess://[^[:space:]]+' "$file")
 vless=$(grep -E -o 'vless://[^[:space:]]+' "$file")
 trojan=$(grep -E -o 'trojan://[^[:space:]]+' "$file")
 ss=$(grep -E -o 'ss://[^[:space:]]+' "$file")
 
-echo "$vmess" > "$output_file"
-echo "$vless" >> "$output_file"
-echo "$trojan" >> "$output_file"
-echo "$ss" >> "$output_file"
+echo "$vmess" > vmess1
+echo "$vless" > vless1
+echo "$trojan" > trojan1
+echo "$ss" > ss1
 
-sort -u oke > All
+sort -u vmess1 > vmess
+sort -u vless1 > vless
+sort -u trojan1 > trojan
+sort -u ss1 > ss
 
 #### speed test command ####
 #chmod +x ./bin/xrayknife
