@@ -42,7 +42,7 @@ echo "All downloads completed!"
 
 extract_lines() {
     local file="$1"
-    grep -E '^.*(vmess|vless|trojan)://' "$file"
+    grep -E '^.*(vmess|vless|trojan|ss)://' "$file"
 }
 
 
@@ -60,10 +60,12 @@ file="account"
 vmess=$(grep -E -o 'vmess://[^[:space:]]+' "$file")
 vless=$(grep -E -o 'vless://[^[:space:]]+' "$file")
 trojan=$(grep -E -o 'trojan://[^[:space:]]+' "$file")
+ss=$(grep -E -o 'ss://[^[:space:]]+' "$file")
 
 echo "$vmess" > "$output_file"
 echo "$vless" >> "$output_file"
 echo "$trojan" >> "$output_file"
+echo "$ss" >> "$output_file"
 
 sort -u oke > All
 
