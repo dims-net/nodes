@@ -24,8 +24,8 @@ for link in "${links[@]}"; do
 done
 
 # best=(
-    "https://mangkoyla.vercel.app/api/raw?vpn=vmess,vless,trojan"
-)
+#    "https://mangkoyla.vercel.app/api/raw?vpn=vmess,vless,trojan"
+# )
 
 #for best in "${best[@]}"; do
 #    curl -s "$best" >> best
