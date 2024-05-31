@@ -66,6 +66,10 @@ echo "$vless" > vless1
 echo "$trojan" > trojan1
 echo "$ss" > ss1
 
+if [ ! -d "protocol" ]; then
+    mkdir protocol
+fi
+
 sort -u vmess1 > ./protocol/vmess
 sort -u vless1 > ./protocol/vless
 sort -u trojan1 > ./protocol/trojan
