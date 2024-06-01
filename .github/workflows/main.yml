@@ -15,14 +15,13 @@ jobs:
 
     - name: Run Script
       run: |
-        rm All
         bash main.sh
 
     - name: Add Changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add All ./protocol
+        git add ./protocol
 
     - name: Commit Changes
       run: |
